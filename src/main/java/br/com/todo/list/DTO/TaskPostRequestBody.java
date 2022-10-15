@@ -1,20 +1,39 @@
 package br.com.todo.list.DTO;
 
+import br.com.todo.list.entities.Task;
 import lombok.Data;
 
 @Data
-public class TaskDTO {
+public class TaskPostRequestBody {
+    private Long id;
     private String title;
     private String description;
     private boolean status;
 
-    protected TaskDTO() {
+    public TaskPostRequestBody() {
     }
 
-    public TaskDTO(Long id, String title, String description, boolean status) {
+    public TaskPostRequestBody(Long id, String title, String description, boolean status) {
+        this.id = id;
         this.title = title;
         this.description = description;
         this.status = status;
+
+    }
+
+    public TaskPostRequestBody(Task task) {
+        id = task.getId();
+        title = task.getTitle();
+        description = task.getDescription();
+        status = task.isStatus();
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getTitle() {

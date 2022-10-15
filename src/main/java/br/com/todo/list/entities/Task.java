@@ -24,14 +24,14 @@ public class Task {
         this.status = status;
     }
 
-    @Override
-    public String toString() {
-        return "Task{" +
-                "title='" + title + '\'' +
-                ", description='" + description + '\'' +
-                ", status=" + status +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Task{" +
+//                "title='" + title + '\'' +
+//                ", description='" + description + '\'' +
+//                ", status=" + status +
+//                '}';
+//    }
 
     public Long getId() {
         return id;
